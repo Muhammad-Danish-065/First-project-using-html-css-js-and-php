@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="container">
+        <form id="questionForm" method="post" action="task.php">
+            <div>
+                <label for="question">Question:</label>
+                <input type="text" id="question" name="question" required>
+            </div>
+            
+            <div>
+                <label>Standards:</label>
+                <div>
+                    <input type="checkbox" id="standard1" name="standards[]" value="Standard 1">
+                    <label for="standard1">Standard 1</label>
+                    <input type="checkbox" id="standard2" name="standards[]" value="Standard 2">
+                    <label for="standard2">Standard 2</label>
+                    <input type="checkbox" id="standard3" name="standards[]" value="Standard 3">
+                    <label for="standard3">Standard 3</label>
+                    <input type="checkbox" id="standard4" name="standards[]" value="Standard 4">
+                    <label for="standard4">Standard 4</label>
+                </div>
+
+            <div>
+                <label>Options:</label>
+                <div>
+                    <input type="radio" id="textboxOption" name="option" value="textbox" onclick="showTextbox()" required>
+                    <label for="textboxOption">Textbox</label>
+                    <input type="radio" id="dropdownOption" name="option" value="dropdown" onclick="showDropdown()">
+                    <label for="dropdownOption">Dropdown</label>
+                </div>
+
+            <div id="dynamicFields"></div>
+
+            <div>
+                <button type="button" onclick="addTextbox()">+ Add More Textbox</button>
+            </div>
+
+            <div>
+                <label for="uniqueId">Unique ID (Admin Only):</label>
+                <input type="text" id="uniqueId" name="uniqueId" class="admin-only">
+            </div>
+
+            <div>
+                <label for="domain">Domain:</label>
+                <input type="text" id="domain" name="domain" required>
+            </div>
+
+            <div>
+                <label for="implementationSteps">Implementation Steps:</label>
+                <input type="text" id="implementationSteps" name="implementationSteps">
+            </div>
+
+            <div>
+                <label for="comments">Comments:</label>
+                <input type="text" id="comments" name="comments">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="task.js"></script>
+</body>
+</html>
